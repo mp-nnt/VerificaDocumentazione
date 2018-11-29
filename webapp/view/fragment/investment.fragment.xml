@@ -1,0 +1,151 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<!--FlexBox alignItems="Start" justifyContent="End">
+		<items>
+			<Button text="{i18n>approveAll}" id="ApproveAllInv" press="onApproveAllInv"/>
+		</items>
+	</FlexBox-->
+	<f:Form editable="true" id="investmentForm" width="100%">
+		<f:layout>
+			<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4"
+				emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+		</f:layout>
+		<f:formContainers>
+			<f:FormContainer title="{i18n>tableA}">
+				<f:formElements>
+					<f:FormElement label="{i18n>totalA}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/totalA}"/>
+									<!--Switch type="AcceptReject" state="{/totalA_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>tableB}">
+				<f:formElements>
+					<f:FormElement label="{i18n>totalB}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/totalB}"/>
+									<!--Switch type="AcceptReject" state="{/totalB_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>tableC}">
+				<f:formElements>
+					<f:FormElement label="{i18n>tableC_1}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/tableC_1}" wrapping="true"/>
+									<!--Switch type="AcceptReject" state="{/tableC_1_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label=" {i18n>tableC_2}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/tableC_2}" wrapping="true"/>
+									<!--Switch type="AcceptReject" state="{/tableC_2_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="{i18n>tableC_3}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/tableC_3}" wrapping="true"/>
+									<!--Switch type="AcceptReject" state="{/tableC_3_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="{i18n>tableC_4}">
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<Text text="{/tableC_4}" wrapping="true"/>
+									<!--Switch type="AcceptReject" state="{/tableC_4_vrf}"/-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer>
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<FormattedText htmlText="{i18n>invText}" width="100%"/>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>claim}">
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<VBox>
+										<FormattedText htmlText="{i18n>claimText3}" width="100%"/>
+										<Text text="{i18n>yes}" visible="{/claimYes}"/>
+										<Text text="{i18n>no}" visible="{/claimNo}"/>
+									</VBox>
+									<!--Switch type="AcceptReject" state="{/claim_yes_no_vrf}"-->
+								</items>
+							</FlexBox>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>claimAlso}">
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<FormattedText htmlText="{i18n>claimAlsoText}" width="100%"/>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>privacy}">
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<FormattedText htmlText="{i18n>privacyText}" width="100%"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="{i18n>date}">
+						<f:fields>
+							<Text text="{/luogo}, {/data}"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="{i18n>signature}">
+						<f:fields>
+							<Text text="{/signature}"/>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer title="{i18n>note}">
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<Text text="{/noteInv}" growing="true" width="100%"/>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>

@@ -1,0 +1,34 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:commons="sap.ui.commons"
+	controllerName="com.pabz.VerificaDocumentazione.controller.Main" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" showHeader="false">
+				<content>
+					<IconTabBar id="bar" backgroundDesign="Transparent" headerBackgroundDesign="Translucent">
+						<items>
+							<IconTabFilter id="personalData" icon="sap-icon://account" text="{i18n>personalData}">
+								<core:Fragment fragmentName="com.pabz.VerificaDocumentazione.view.fragment.personalData" type="XML"/>
+							</IconTabFilter>
+							<IconTabFilter id="statement" icon="sap-icon://task" text="{i18n>statement}">
+								<content>
+									<core:Fragment fragmentName="com.pabz.VerificaDocumentazione.view.fragment.statement" type="XML"/>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="investment" icon="sap-icon://monitor-payments" text="{i18n>investment}">
+								<content>
+									<core:Fragment fragmentName="com.pabz.VerificaDocumentazione.view.fragment.investment" type="XML"/>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter id="attachment" icon="sap-icon://attachment" text="{i18n>attachment}">
+								<content>
+									<core:Fragment fragmentName="com.pabz.VerificaDocumentazione.view.fragment.attachment" type="XML"/>
+								</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
